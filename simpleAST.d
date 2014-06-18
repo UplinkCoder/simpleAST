@@ -87,8 +87,8 @@ ast.root.add!Function(new Function("getHelloWorld",t_string,[t_void],
 		"hw",t_string,new Literal!string())
 ));
 
-
-// module example // module declaration // "module" $module_name;
+string example = `
+module example // module declaration // "module" $module_name;
 import std.stdio; // import Statement // "import" $module_name;
 writeln(  // (free) function call // $function_name optional '(' optional $params[] ')'';'
 	"Hello World" // string literal // '"' $value oftype (string) '"'
@@ -98,18 +98,5 @@ string getHelloWorld() // function Definition // $return_type $function_name '('
 {
 	string hw = "Hello World"; // variable declaration + variable assignment // ($type_name || "auto") $variable_name ($value oftype($type_name))
 	return hw; // return statement // "return (optional value || '(' value ')' oftype(RetunType)); 
-}
+}`
 
-Token : "MyString" as first token// could be : 
-TypeName :
-Mystring getString() { return "string".to!Mystring }; // FunctionDefinition
-Mystring myvar;  // VariableDeclaration
-VariableName :
-Mystring = "Hello".to!Mystring; // variableAssignment
-FunctionName :
-Mystring ; // funtionCall (without parans)
-
-getFunctionCalls("writeln").filter!(c => c.parameters == "
-
-
-// FunDef, FunCall, VarAssign, VarDef 
